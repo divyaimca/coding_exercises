@@ -1,6 +1,6 @@
 $rg = read-host "(new) Resource Group Name"
 $region = "eastus"
-$username = "kodekloud" #username for the VM
+$username = "divyaimca" #username for the VM
 $plainPassword = "VMP@55w0rd" #your VM password
 
 
