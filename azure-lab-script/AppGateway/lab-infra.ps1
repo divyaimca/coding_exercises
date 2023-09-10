@@ -1,9 +1,9 @@
-#Application Gateway Demo Infra - v2.0, written by Rithin Skaria
+#Application Gateway Demo
 Clear-Host
 #Variables
 $rg = read-host "(new) Resource Group Name"
 $region = "eastus"
-$username = "kodekloud" #username for the VM
+$username = "divyaimca" #username for the VM
 $plainPassword = "VMP@55w0rd" #your VM password
 $VMSize = "Standard_B1s"
 
@@ -205,7 +205,7 @@ $Params = @{
     Publisher          = 'Microsoft.Azure.Extensions'
     ExtensionType      = 'CustomScript'
     TypeHandlerVersion = '2.1'
-    Settings          = @{fileUris = @('https://raw.githubusercontent.com/rithinskaria/kodekloud-azure/main/AppGateway/jumpbox.sh'); commandToExecute = './jumpbox.sh'}
+    Settings          = @{fileUris = @('https://raw.githubusercontent.com/divyaimca/coding_exercises/main/azure-lab-script/AppGateway/jumpbox.sh'); commandToExecute = './jumpbox.sh'}
 }
 Set-AzVMExtension @Params
 
