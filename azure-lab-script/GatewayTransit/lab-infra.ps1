@@ -46,7 +46,7 @@ $Params = @{
     Publisher          = 'Microsoft.Azure.Extensions'
     ExtensionType      = 'CustomScript'
     TypeHandlerVersion = '2.1'
-    Settings          = @{fileUris = @('https://raw.githubusercontent.com/rithinskaria/kodekloud-azure/main/GatewayTransit/configureSpoke1.sh'); commandToExecute = './configureSpoke1.sh'}
+    Settings          = @{fileUris = @('https://raw.githubusercontent.com/divyaimca/coding_exercises/main/azure-lab-script/GatewayTransit/configureSpoke1.sh'); commandToExecute = './configureSpoke1.sh'}
 }
 
 
@@ -85,7 +85,7 @@ $Params = @{
     Publisher          = 'Microsoft.Azure.Extensions'
     ExtensionType      = 'CustomScript'
     TypeHandlerVersion = '2.1'
-    Settings          = @{fileUris = @('https://raw.githubusercontent.com/rithinskaria/kodekloud-azure/main/GatewayTransit/configureSpoke2.sh'); commandToExecute = './configureSpoke2.sh'}
+    Settings          = @{fileUris = @('https://raw.githubusercontent.com/divyaimca/coding_exercises/main/azure-lab-script/GatewayTransit/configureSpoke2.sh'); commandToExecute = './configureSpoke2.sh'}
 }
 
 
