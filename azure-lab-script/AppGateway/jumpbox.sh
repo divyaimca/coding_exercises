@@ -7,13 +7,13 @@ j=$(($i + 4))
 k=$(($i + 1))
 greenIp="10.0.1.$j"
 sshpass -p "VMP@55w0rd" \
-ssh -o StrictHostKeyChecking=no kodekloud@$greenIp bash -c  \
+ssh -o StrictHostKeyChecking=no divyaimca@$greenIp bash -c  \
 "'export VAR=$i
 printenv | grep VAR
 echo "Setting up green VM"
 sudo apt install apache2 -y
 sudo chmod -R -v 777 /var/www/
-sudo curl "https://raw.githubusercontent.com/rithinskaria/kodekloud-azure/main/AppGateway/sample.html" > /var/www/html/index.html
+sudo curl "https://raw.githubusercontent.com/divyaimca/coding_exercises/main/azure-lab-script/sample.html" > /var/www/html/index.html
 sed -i "s/PAGECOLOR/green/g" /var/www/html/index.html
 sed -i "s/VMID/$k/g" /var/www/html/index.html
 exit
@@ -26,14 +26,14 @@ j=$(($i + 4))
 k=$(($i + 1))
 redIp="10.0.2.$j"
 sshpass -p "VMP@55w0rd" \
-ssh -o StrictHostKeyChecking=no kodekloud@$redIp bash -c  \
+ssh -o StrictHostKeyChecking=no divyaimca@$redIp bash -c  \
 "'export VAR=$i
 printenv | grep VAR
 echo "Setting up red VM"
 sudo apt install apache2 -y
 sudo chmod -R -v 777 /var/www/
 sudo mkdir -v /var/www/html/red/
-sudo curl "https://raw.githubusercontent.com/rithinskaria/kodekloud-azure/main/AppGateway/sample.html" > /var/www/html/index.html
+sudo curl "https://raw.githubusercontent.com/divyaimca/coding_exercises/main/azure-lab-script/sample.html" > /var/www/html/index.html
 sed -i "s/PAGECOLOR/red/g" /var/www/html/index.html
 sed -i "s/VMID/$k/g" /var/www/html/index.html
 cat /var/www/html/index.html > /var/www/html/red/red.html
@@ -48,14 +48,14 @@ j=$(($i + 4))
 k=$(($i + 1))
 blueIp="10.0.3.$j"
 sshpass -p "VMP@55w0rd" \
-ssh -o StrictHostKeyChecking=no kodekloud@$blueIp bash -c  \
+ssh -o StrictHostKeyChecking=no divyaimca@$blueIp bash -c  \
 "'export VAR=$i
 printenv | grep VAR
 echo "Setting up blue VM"
 sudo apt install apache2 -y
 sudo chmod -R -v 777 /var/www/
 sudo mkdir -v /var/www/html/blue/
-sudo curl "https://raw.githubusercontent.com/rithinskaria/kodekloud-azure/main/AppGateway/sample.html" > /var/www/html/index.html
+sudo curl "https://raw.githubusercontent.com/divyaimca/coding_exercises/main/azure-lab-script/sample.html" > /var/www/html/index.html
 sed -i "s/PAGECOLOR/blue/g" /var/www/html/index.html
 sed -i "s/VMID/$k/g" /var/www/html/index.html
 cat /var/www/html/index.html > /var/www/html/blue/blue.html
