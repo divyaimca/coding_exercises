@@ -1,2 +1,2 @@
-python exercises
+Coding exercises
 
